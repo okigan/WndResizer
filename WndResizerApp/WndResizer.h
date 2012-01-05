@@ -11,7 +11,6 @@ This disclaimer should not be removed and should exist in any reproduction of th
 */
 
 #pragma once
-#include "uxtheme.h"
 
 
 #define ANCHOR_LEFT                   1
@@ -33,39 +32,14 @@ This disclaimer should not be removed and should exist in any reproduction of th
 #define DOCK_BOTTOM 4
 #define DOCK_FILL   5
 
+class CPanel;
+class CUIPanel;
 
-class CWndResizer 
+typedef CList<CPanel *, CPanel *> CPanelList;
+
+class CPanel : public CRect
 {
 public:
-  CWndResizer(void);
-  ~CWndResizer(void);
-private:
-
-  class CPanel;
-  typedef CList<CPanel *, CPanel *> CPanelList;
-
-  typedef enum tagSplitterOrientation 
-  {
-    // a horizontal splitter container panel
-    SPLIT_CONTAINER_H = 1,
-    // a vertical splitter contianer panel
-    SPLIT_CONTAINER_V = 2, 
-
-  } SplitterOrientation;
-
-
-  typedef enum tagFlowDirection 
-  {
-    // left to right flow direction
-    LEFT_TO_RIGHT = 3,
-    // top to bottom flow direction
-    TOP_TO_BOTTOM = 4, 
-
-  } FlowDirection;
-
-  class CPanel : public CRect
-  {
-  public:
     CPanel();
     CPanel(const CRect * prc);
     virtual ~CPanel();
@@ -89,155 +63,45 @@ private:
     virtual CString ToString();
     virtual CString GetTypeName();
     virtual CWnd * GetHookedWnd();
-  private:
+private:
     void Init();
-  };
+};
 
-  class CRootPanel : public CPanel
-  {
-  public:
+class CRootPanel : public CPanel
+{
+public:
     CRootPanel();
     ~CRootPanel();
     virtual CWnd * GetHookedWnd();
     CWnd * m_pHookWnd;
     virtual CString GetTypeName();
-  }; 
+}; 
 
-  class CUIPanel : public CPanel
+class CWndResizer 
+{
+public:
+  CWndResizer(void);
+  ~CWndResizer(void);
+public:
+
+  typedef enum tagSplitterOrientation 
   {
-  public:
-    CUIPanel(const CRect * prc, UINT uID);
-    ~CUIPanel();
-    UINT m_uID;   // could be a resource ID or a HWND
-    BOOL m_bOle;  // TRUE= m_uID is an ID of an ActiveX or OLE control, FALSE=regular windows control
-    virtual CString GetTypeName();
-  };
+    // a horizontal splitter container panel
+    SPLIT_CONTAINER_H = 1,
+    // a vertical splitter contianer panel
+    SPLIT_CONTAINER_V = 2, 
+
+  } SplitterOrientation;
 
 
-  class CVisualPanel : public CPanel
+  typedef enum tagFlowDirection 
   {
-  public:
-    CVisualPanel();
-    CVisualPanel(const CRect * prc);
-    ~CVisualPanel();
-    virtual void Draw(CDC * pDC);
-    BOOL m_bVisible;
-    virtual CString GetTypeName();
-    virtual void OnResized();
-  private:
-    CRect m_rcPrev;
-  };
+    // left to right flow direction
+    LEFT_TO_RIGHT = 3,
+    // top to bottom flow direction
+    TOP_TO_BOTTOM = 4, 
 
-  class CGripperPanel : public CVisualPanel
-  {
-  public:
-    CGripperPanel();
-    CGripperPanel(const CRect * prc);
-    ~CGripperPanel();
-    virtual void Draw(CDC * pDC);
-    virtual CString GetTypeName();
-   private:
-    HTHEME m_hTheme;
-    int m_iPartId;
-    int m_iStateId;
-    CString m_sClassName;
-  };
-
-  class CSplitterGripperPanel : public CVisualPanel
-  {
-  public:
-    CSplitterGripperPanel(CWndResizer::SplitterOrientation type);
-    ~CSplitterGripperPanel();
-    virtual void Draw(CDC * pDC);
-    virtual CString GetTypeName();
-  private:
-    CWndResizer::SplitterOrientation m_OrienType;
-  };
-
-  class CSplitPanel : public CPanel
-  {
-  public:
-    CSplitPanel(CPanel * pPanel);
-    ~CSplitPanel();
-    virtual BOOL SetAnchor(UINT anchor);
-    virtual BOOL AddChild(CPanel * prc);
-    virtual BOOL RemoveChild(CPanel * prc);
-    virtual CString GetTypeName();
-  private:
-    CPanel * m_pOriginalPanel;
-  };
-
-
-  class CSpitterPanel : public CPanel
-  {
-  public:
-    CSpitterPanel(CWndResizer::SplitterOrientation type);
-    CSpitterPanel(const CRect * prc, CWndResizer::SplitterOrientation type);
-    ~CSpitterPanel();
-    virtual CString GetTypeName();
-    CSplitterGripperPanel * m_pGrippePanel;
-  private:
-    CWndResizer::SplitterOrientation m_OrienType;
-  };
-
-
-  class CSplitContainer : public CPanel
-  {
-  public:
-    CSplitContainer(CSplitPanel * pPanelA, CSplitPanel * pPanelB, CWndResizer::SplitterOrientation type);
-    ~CSplitContainer();
-    virtual void OnResized();
-    virtual BOOL AddChild(CPanel * prc);
-    virtual BOOL RemoveChild(CPanel * prc);
-    virtual CString GetTypeName();
-    void SetSplitterPosition(int leftOfSpliter /* or topOfSpliter if vertical */);
-    int GetSplitterPosition();
-    void SetFixedPanel(short nFixedPanel /* 1=left or top; 2=right or bototm; other=no fixed panel */);
-    short GetFixedPanel();
-    void SetIsSplitterFixed(BOOL bFixed);
-    BOOL GetIsSplitterFixed();
-    void SetShowSplitterGrip(BOOL bShow);
-    BOOL GetShowSplitterGrip();
-
-    static CWndResizer::CSplitContainer * Create(CPanel * pPanelA, CPanel * pPanelB);
-    
-    CWndResizer::SplitterOrientation m_Orientation;
-  private:
-    BOOL m_IsSplitterFixed;
-    short m_FixedPanel; // 1=left or top panel; 2=right or bottom panel, otherwise no fixed panel
-
-    double m_nRatio;
-    int m_nSplitterSize; // for horizontal, it is the splitter width, otherwise it is the splitter height
-    void GetSplitArea(CRect * pSplitterPanel);
-    int GetSplitterSize(CPanel * pLeftPanel, CPanel * pRightPanel);
-    void UpdateRatio();
-
-    CSplitPanel * m_pPanelA;
-    CSplitPanel * m_pPanelB;
-    CSpitterPanel * m_pSplitter;
-  };
-
-
-  class CFlowLayoutPanel : public CPanel
-  {
-  public:
-    CFlowLayoutPanel();
-    CFlowLayoutPanel(const CRect * prc);
-    ~CFlowLayoutPanel();
-    virtual void OnResized();
-    virtual CString GetTypeName();
-    void SetFlowDirection(CWndResizer::FlowDirection direction);
-    CWndResizer::FlowDirection GetFlowDirection();
-    void SetItemSpacingX(int nSpace);
-    int GetItemSpacingX();
-    void SetItemSpacingY(int nSpace);
-    int GetItemSpacingY();
-
-  private:
-    int m_nItemSpacingX;
-    int m_nItemSpacingY;
-    CWndResizer::FlowDirection m_nFlowDirection;
-  };
+  } FlowDirection;
 
 public:
   BOOL SetAnchor(LPCTSTR panelName, UINT anchor);
@@ -341,8 +205,8 @@ private:
   void ResizeUI(CWndResizer::CPanel * pRoot);
 
   CString IdToName(UINT uID);
-  CWndResizer::CUIPanel * CreateUIPanel(UINT uID);
-  CWndResizer::CUIPanel * GetUIPanel(UINT uID);
+  CUIPanel * CreateUIPanel(UINT uID);
+  CUIPanel * GetUIPanel(UINT uID);
 
   void UpdateSplitterOffset(CPoint ptCurr);
   void GetDebugInfo(CPanel * pRoot, CString & info, CString  indent);
