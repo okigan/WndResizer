@@ -94,6 +94,20 @@ void CWndResizer::OnScroll()
   root.OnResized();
   ResizeUI(&root);
 }
+
+BOOL CALLBACK MakeGroupBoxesTransparent(HWND hwnd, LPARAM) 
+{
+    TCHAR className[128] = _T("");
+    int iRet = GetClassName(hwnd, className, ARRAYSIZE(className) - 1);
+
+    LONG style = GetWindowLong(hwnd, GWL_STYLE);
+
+    if ( 0 == _tcscmp(className, _T("Button")) && BS_GROUPBOX == (style & BS_GROUPBOX) ){
+        CWnd::ModifyStyleEx(hwnd, NULL, WS_EX_TRANSPARENT, NULL);
+    }
+    return TRUE;
+}
+
 BOOL CWndResizer::Hook(CWnd * pParent)
 {
   ASSERT( m_pHookedWnd == NULL );
@@ -115,6 +129,8 @@ BOOL CWndResizer::Hook(CWnd * pParent)
   root.AddChild( pResizeGripper );
 
   WndResizerData.SetAt(m_pHookedWnd->m_hWnd, this);
+  CWnd::ModifyStyle(pParent->GetSafeHwnd(), NULL, WS_CLIPCHILDREN | WS_CLIPSIBLINGS, NULL);
+  EnumChildWindows(pParent->GetSafeHwnd(), MakeGroupBoxesTransparent, NULL);
 
   m_pfnWndProc = (WNDPROC)::SetWindowLongPtr(m_pHookedWnd->m_hWnd, GWLP_WNDPROC, (LONG_PTR)WindowProc);
   return TRUE;
@@ -141,6 +157,9 @@ BOOL CWndResizer::Hook(CWnd * pParent, CSize &  size)
   root.AddChild( pResizeGripper );
 
   WndResizerData.SetAt(m_pHookedWnd->m_hWnd, this);
+
+  CWnd::ModifyStyle(pParent->GetSafeHwnd(), NULL, WS_CLIPCHILDREN | WS_CLIPSIBLINGS, NULL);
+  EnumChildWindows(pParent->GetSafeHwnd(), MakeGroupBoxesTransparent, NULL);
 
   m_pfnWndProc = (WNDPROC)::SetWindowLongPtr(m_pHookedWnd->m_hWnd, GWLP_WNDPROC, (LONG_PTR)WindowProc);
   return TRUE;
