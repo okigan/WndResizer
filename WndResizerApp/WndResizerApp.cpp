@@ -13,7 +13,7 @@
 
 // CWndResizerApp
 
-BEGIN_MESSAGE_MAP(CWndResizerApp, CWinAppEx)
+BEGIN_MESSAGE_MAP(CWndResizerApp, CWinApp)
 	ON_COMMAND(ID_HELP, &CWinApp::OnHelp)
 END_MESSAGE_MAP()
 
@@ -46,7 +46,7 @@ BOOL CWndResizerApp::InitInstance()
 	InitCtrls.dwICC = ICC_WIN95_CLASSES;
 	InitCommonControlsEx(&InitCtrls);
 
-	CWinAppEx::InitInstance();
+	CWinApp::InitInstance();
 
 	// Standard initialization
 	// If you are not using these features and wish to reduce the size

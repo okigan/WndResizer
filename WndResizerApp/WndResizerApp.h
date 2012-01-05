@@ -15,7 +15,7 @@
 // See WndResizerApp.cpp for the implementation of this class
 //
 
-class CWndResizerApp : public CWinAppEx
+class CWndResizerApp : public CWinApp
 {
 public:
 	CWndResizerApp();
