@@ -13,6 +13,7 @@ This disclaimer should not be removed and should exist in any reproduction of th
 #include "StdAfx.h"
 #include "WndResizer.h"
 
+#pragma comment(lib, "UxTheme.lib")
 
 
 static CMap<HWND, HWND, CWndResizer *, CWndResizer *> WndResizerData;
