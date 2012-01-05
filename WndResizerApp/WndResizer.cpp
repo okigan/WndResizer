@@ -520,6 +520,48 @@ BOOL CWndResizer::GetAnchor(UINT uID, UINT & anchor)
   return TRUE;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+BOOL CWndResizer::SetOffset(LPCTSTR panelName, UINT anchor, int offset)
+{
+  // container must already exist
+  CPanel * pPanel = NULL;
+  if ( (pPanel = FindPanelByName(&root, panelName)) == NULL)  
+  {
+    return FALSE;
+  }
+
+  switch (anchor)
+  {
+  case ANCHOR_LEFT    : pPanel->LeftOffset  = offset; break;
+  case ANCHOR_TOP     : pPanel->TopOffset   = offset; break;
+  case ANCHOR_RIGHT   : pPanel->RightOffset = offset; break;
+  case ANCHOR_BOTTOM  : pPanel->BottomOffset= offset; break;
+  }
+
+  return TRUE;
+}
+
+BOOL CWndResizer::SetOffset(UINT uID, UINT anchor, int offset)
+{
+  ASSERT(m_pHookedWnd != NULL);
+
+  CUIPanel * pPanel = GetUIPanel(uID);
+
+  if (pPanel == NULL)
+  {
+    return FALSE;
+  }
+
+  switch (anchor)
+  {
+  case ANCHOR_LEFT    : pPanel->LeftOffset  = offset; break;
+  case ANCHOR_TOP     : pPanel->TopOffset   = offset; break;
+  case ANCHOR_RIGHT   : pPanel->RightOffset = offset; break;
+  case ANCHOR_BOTTOM  : pPanel->BottomOffset= offset; break;
+  }
+  
+  return TRUE;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 BOOL CWndResizer::SetDock(LPCTSTR panelName, UINT uDock)
 {

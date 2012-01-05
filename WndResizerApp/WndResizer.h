@@ -245,6 +245,8 @@ public:
   BOOL GetAnchor(LPCTSTR panelName, UINT & anchor);
   BOOL GetAnchor(UINT panelID, UINT & anchor);
 
+  BOOL SetOffset(LPCTSTR panelName, UINT anchor, int offset);
+  BOOL SetOffset(UINT panelID, UINT anchor, int offset);
 
   BOOL SetDock(LPCTSTR panelName, UINT anchor);
   BOOL SetDock(UINT panelID, UINT anchor);
