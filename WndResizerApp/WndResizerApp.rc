@@ -1,0 +1,490 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\WndResizerApp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WndResizerApp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "WndResizerApp.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "WndResizerApp.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SWITCH_BOARD_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_EX06_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX05_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX04_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX03_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX02_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX01_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX07_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX08_A_PPG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_EX08_B_PPG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_TEST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX09_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 406
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_EX10_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_EX10_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SWITCH_BOARD_DLG DIALOGEX 0, 0, 213, 232
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Switch board for CWndResizer samples"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,102,211,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,157,211,50,14
+    PUSHBUTTON      "Example 1: Simple resizing usage",IDC_BUTTON_EX01,7,7,199,14
+    PUSHBUTTON      "Example 2: Restricting minimum and maximum size",IDC_BUTTON_EX02,7,25,199,14
+    LTEXT           "Followings are advanced features of CWndResizer:",IDC_STATIC,7,50,165,8
+    PUSHBUTTON      "Example 3: Centering more than one dialog controls",IDC_BUTTON_EX03,7,61,199,14
+    PUSHBUTTON      "Example 4: Flow layout",IDC_BUTTON_EX04,7,79,199,14
+    PUSHBUTTON      "Example 5: Nested split containers",IDC_BUTTON_EX05,7,97,199,14
+    PUSHBUTTON      "Example 6: Docking",IDC_BUTTON_EX06,7,115,199,14
+    PUSHBUTTON      "Example 7: Fixed panel and fixed splitter",IDC_BUTTON_EX07,7,133,199,14
+    PUSHBUTTON      "Example 8: CPropertySheet",IDC_BUTTON_EX8,7,151,199,14
+    PUSHBUTTON      "Test Dlg",IDC_BUTTON_TEST,7,211,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Example 9: Resizing controls created on-the-fly",IDC_BUTTON_EX9,7,169,199,14
+    PUSHBUTTON      "Example 10:  CFormView",IDC_BUTTON_EX10,7,187,199,14
+END
+
+IDD_EX06_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 6: Docking"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    LTEXT           "Note: Resize the window and observe the resize behaviour.",IDC_STATIC_NOTE,7,7,303,17
+    PUSHBUTTON      "Button1(Dock: Top)",IDC_BUTTON1,7,30,89,14
+    PUSHBUTTON      "Button2(Dock: Right)",IDC_BUTTON2,213,138,97,14
+    PUSHBUTTON      "Button3(Dock: Bottom)",IDC_BUTTON3,42,105,94,14
+    PUSHBUTTON      "Button4(Dock: Left)",IDC_BUTTON4,42,66,89,14
+    EDITTEXT        IDC_EDIT1,165,66,71,53,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_EX05_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 5: Nested split containers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    GROUPBOX        "Horizontal splitter demo",IDC_FRAME_DEMO_H,7,27,153,128
+    LTEXT           "Note: Resize the window and observe the resize behaviour. And also move the mouse between the frames and notice the cursor changes. Use the mouse to resize the frames.",IDC_STATIC,7,7,303,17
+    GROUPBOX        "Vertical splitter demo",IDC_FRAME_DEMO_V,169,27,141,128
+    GROUPBOX        "Left panel",IDC_FRAME_LEFT,15,39,67,108
+    GROUPBOX        "Right panel",IDC_FRAME_RIGHT,87,39,67,108
+    GROUPBOX        "Top panel",IDC_FRAME_TOP,177,39,126,51
+    GROUPBOX        "Bottom panel",IDC_FRAME_BOTTOM,177,99,126,49
+END
+
+IDD_EX04_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 4: Flow layout"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    LTEXT           "Note: Resize the window and observe the resize behaviour. And also move the mouse between the frames and notice the cursor changes. Use the mouse to resize the frames. Notice how the buttons are arranged as the dialog resizes.",IDC_STATIC,7,7,303,28
+    GROUPBOX        "Flow direction: Left to right",IDC_FRAME_LEFT,7,41,146,114
+    GROUPBOX        "Flow direction: Top to bottom",IDC_FRAME_RIGHT,159,41,151,114
+    PUSHBUTTON      "Button1",IDC_BUTTON1,16,53,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON2,19,75,38,50
+    PUSHBUTTON      "Button3",IDC_BUTTON3,78,53,50,24
+    PUSHBUTTON      "Button4",IDC_BUTTON4,68,88,42,14
+    PUSHBUTTON      "Button5",IDC_BUTTON5,69,105,50,14
+    PUSHBUTTON      "Button6",IDC_BUTTON6,99,137,50,14
+    PUSHBUTTON      "Button7",IDC_BUTTON7,167,53,50,14
+    PUSHBUTTON      "Button8",IDC_BUTTON8,171,75,38,50
+    PUSHBUTTON      "Button9",IDC_BUTTON9,229,53,50,24
+    PUSHBUTTON      "Button10",IDC_BUTTON10,219,88,42,14
+    PUSHBUTTON      "Button11",IDC_BUTTON11,221,105,50,14
+    PUSHBUTTON      "Button12",IDC_BUTTON12,254,137,50,14
+END
+
+IDD_EX03_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 3: Centering more than one dialog controls"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    PUSHBUTTON      "I'm horizontally centerd",IDC_BTN_H,27,25,92,14
+    PUSHBUTTON      "I'm vertically centerd",IDC_BTN_V,292,49,18,73,BS_MULTILINE
+    PUSHBUTTON      "Top",IDC_BTN_TOP,27,122,34,14
+    PUSHBUTTON      "Left",IDC_BTN_LEFT,10,138,34,14
+    PUSHBUTTON      "Right",IDC_BTN_RIGHT,46,138,34,14
+    PUSHBUTTON      "Bottom",IDC_BTN_BOTTOM,27,154,34,14
+    LTEXT           "Note: Resize the window and observe the resize behaviour.",IDC_STATIC,7,7,192,8
+END
+
+IDD_EX02_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 2: Restricting minimum and maximum size"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    LTEXT           "Note: Resize the window and observe the resize behaviour.",IDC_STATIC,7,7,192,8
+    LTEXT           "My min size is (150, 100) and max size is (300, 200). I have right piriority.",IDC_STATIC_RIGHT,160,18,150,41,WS_BORDER
+    LTEXT           "This dialog has min size (100, 100) and max size (500, 500). Note that coordinates are in client area.",IDC_STATIC_INFO,7,140,303,20
+    LTEXT           "My min size is (150, 100) and max size is (300, 200). I have bottom priority.",IDC_STATIC_LEFT,7,88,150,41,WS_BORDER
+END
+
+IDD_EX01_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 1: Simple resizing usage"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    LTEXT           "Data file:",IDC_STATIC,7,28,30,8
+    EDITTEXT        IDC_EDIT_INPUT_FILE,7,38,250,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BUTTON_BROWSE,260,38,50,14
+    GROUPBOX        "Type of input",IDC_FRAME_INPUT_TYPE,7,57,67,77
+    CONTROL         "Type A",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,73,39,10
+    CONTROL         "Type B",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,15,89,38,10
+    CONTROL         "Type C",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,15,105,39,10
+    GROUPBOX        "Comments",IDC_FRAME_COMMENTS,87,57,223,77
+    EDITTEXT        IDC_EDIT_COMMENTS,97,73,204,52,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Note: Resize the window and observe the resize behaviour.",IDC_STATIC,7,7,192,8
+    CONTROL         "Log output",IDC_CHECK_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,140,51,10
+END
+
+IDD_EX07_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 7: Fixed panel and fixed splitter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    LISTBOX         IDC_LIST1,7,34,96,108,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,111,34,96,108,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST3,214,34,96,108,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Note: Resize the window and observe the resize behaviour. And also move the mouse between the frames and notice the cursor changes. Use the mouse to resize the frames.  Spliter between the last two boxes is disabled. The first is panel is fixed.",IDC_STATIC,7,7,303,24
+    LTEXT           "Width of first box does not change as you resize the dialog.",IDC_STATIC_NOTE,7,148,107,28
+END
+
+IDD_EX08_A_PPG DIALOGEX 0, 0, 235, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST1,7,44,94,105,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,134,44,94,105,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">",IDC_BUTTON1,105,59,25,14
+    PUSHBUTTON      "<",IDC_BUTTON2,105,75,25,14
+    PUSHBUTTON      ">>",IDC_BUTTON3,105,99,25,14
+    PUSHBUTTON      "<<",IDC_BUTTON4,105,115,25,14
+    LTEXT           "Available",IDC_STATIC_AVAILABLE,7,35,30,8
+    LTEXT           "Selected",IDC_STATIC_SELECTED,134,35,28,8
+    LTEXT           "Note: Resize the window and observe the resize behaviour. And also move the mouse between the list boxes and notice the cursor changes. Use the mouse to resize the frames.",IDC_STATIC,7,7,221,26
+END
+
+IDD_EX08_B_PPG DIALOGEX 0, 0, 235, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Notes"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,25,221,124,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Note: Resize the window and observe the resize behaviour.",IDC_STATIC,7,7,221,13
+END
+
+IDD_TEST_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Test Scenerios"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    PUSHBUTTON      "Button1",IDC_BUTTON1,7,7,50,14
+    PUSHBUTTON      "Button2",IDC_BUTTON2,96,17,101,50
+    PUSHBUTTON      "Button3",IDC_BUTTON3,275,108,35,46
+    PUSHBUTTON      "Button4",IDC_BUTTON4,7,72,43,68
+    GROUPBOX        "Static",IDC_STATIC,83,78,129,79
+END
+
+IDD_EX09_DLG DIALOGEX 0, 0, 413, 277
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 9: Resizing controls created on-the-fly"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,303,256,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,356,256,50,14
+    GROUPBOX        "Invisible location marker A",IDC_STATIC_A,7,36,246,208,NOT WS_VISIBLE
+    GROUPBOX        "Invisible location marker B",IDC_STATIC_B,266,36,140,208,NOT WS_VISIBLE
+    LTEXT           "Note: Resize the window and observe the resize behaviour. And also move the mouse between the frames and notice the cursor changes. Use the mouse to resize the frames. The property sheet (left) and the tree control (right) created at run-time.",IDC_STATIC,7,7,399,25
+END
+
+IDD_EX10_DLG DIALOGEX 0, 0, 317, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Example 10:  CFormView"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,162,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,162,50,14
+    GROUPBOX        "Invisible Location Marker",IDC_STATIC_MARKER,7,33,303,118,NOT WS_VISIBLE
+    LTEXT           "Note: Resize the window and observe the resize behaviour. Notice the scrolling effects on the embeded CFormView.",IDC_STATIC,7,7,303,17
+END
+
+IDD_EX10_VIEW DIALOGEX 0, 0, 212, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "...",IDC_BUTTON1,189,7,16,12
+    EDITTEXT        IDC_EDIT1,54,7,134,12,ES_AUTOHSCROLL
+    LTEXT           "Output File:",IDC_STATIC,7,9,39,8
+    LTEXT           "Content:",IDC_STATIC,7,31,30,8
+    EDITTEXT        IDC_EDIT2,54,30,151,136,ES_MULTILINE | ES_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON      "Edit...",IDC_BUTTON2,155,170,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About WndResizerApp..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\WndResizerApp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
