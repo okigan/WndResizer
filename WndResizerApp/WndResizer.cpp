@@ -454,7 +454,7 @@ void CWndResizer::OnPaint()
   {
     return;
   }
-  CPaintDC dc(m_pHookedWnd); // device context for painting
+  CDC* pDC = m_pHookedWnd->GetDC(); // device context for painting
 
   CPanelList panelList;
   GetVisualPanels(&root, &panelList);
@@ -464,7 +464,7 @@ void CWndResizer::OnPaint()
     CVisualPanel * pPanel = (CVisualPanel *) panelList.GetNext(pos);
     if (pPanel->m_bVisible)
     {
-      pPanel->Draw(&dc);
+      pPanel->Draw(pDC);
     }
   }
 
