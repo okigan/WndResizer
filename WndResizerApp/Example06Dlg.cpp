@@ -45,8 +45,8 @@ BOOL CExample06Dlg::OnInitDialog()
 
   CUIntArray arr;
   arr.Add(IDC_BUTTON1);
-  arr.Add(IDC_BUTTON2);
   arr.Add(IDC_BUTTON3);
+  arr.Add(IDC_BUTTON2);
   arr.Add(IDC_BUTTON4);
   arr.Add(IDC_EDIT1);
 
@@ -58,9 +58,9 @@ BOOL CExample06Dlg::OnInitDialog()
 
   bOk = m_resizer.SetDock(IDC_BUTTON1, DOCK_TOP);
    ASSERT( bOk );
-  bOk = m_resizer.SetDock(IDC_BUTTON2, DOCK_RIGHT);
-   ASSERT( bOk );
   bOk = m_resizer.SetDock(IDC_BUTTON3, DOCK_BOTTOM);
+   ASSERT( bOk );
+  bOk = m_resizer.SetDock(IDC_BUTTON2, DOCK_RIGHT);
    ASSERT( bOk );
   bOk = m_resizer.SetDock(IDC_BUTTON4, DOCK_LEFT);
    ASSERT( bOk );
